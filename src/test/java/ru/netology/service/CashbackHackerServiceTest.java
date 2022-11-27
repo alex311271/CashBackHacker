@@ -10,7 +10,7 @@ public class CashbackHackerServiceTest {
     public void shouldCashBackHackerServiceReturn0() {
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(1000);
-        int expected = 0;
+        int expected = 1000;
         Assert.assertEquals(actual, expected);
     }
 
@@ -38,6 +38,14 @@ public class CashbackHackerServiceTest {
         CashbackHackService service = new CashbackHackService();
         int actual = service.remain(550);
         int expected = 450;
+        Assert.assertEquals(actual, expected);
+    }
+
+    @Test
+    public void shouldCashBackHackerServiceReturn1000() {
+        CashbackHackService service = new CashbackHackService();
+        int actual = service.remain(0);
+        int expected = 1000;
         Assert.assertEquals(actual, expected);
     }
 
